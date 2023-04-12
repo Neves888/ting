@@ -2,24 +2,23 @@ from ting_file_management.priority_queue import PriorityQueue
 import pytest
 
 
-file_one = {
+def test_basic_priority_queueing():
+    file_one = {
         "nome_do_arquivo": "teste1.txt",
         "qtd_linhas": 3,
         "linhas_do_arquivo": [""],
         }
-file_two = {
+    file_two = {
         "nome_do_arquivo": "teste2.txt",
         "qtd_linhas": 5,
         "linhas_do_arquivo": [""],
         }
-file_three = {
+    file_three = {
         "nome_do_arquivo": "teste3.txt",
         "qtd_linhas": 10,
         "linhas_do_arquivo": [""],
         }
 
-
-def test_basic_priority_queueing():
     priority = PriorityQueue()
 
     priority.enqueue(file_one)
